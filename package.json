@@ -1,0 +1,17 @@
+{
+  "name": "cornell-covid-data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scrape.js",
+  "scripts": {
+    "start": "node scrape.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-writer": "^1.6.0",
+    "moment": "^2.29.1",
+    "puppeteer": "^10.4.0"
+  },
+  "type": "module"
+}
