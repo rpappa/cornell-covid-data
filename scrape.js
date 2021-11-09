@@ -11,7 +11,7 @@ import log from './log.js'
 const createObjectCsvWriter = csvWriter.createObjectCsvWriter;
 
 // adjust these if needed
-const END_DATE = moment(new Date('10/25/2021')).add(7, 'days');
+const END_DATE = moment(new Date('11/08/2021')).add(7, 'days');
 const MIN_DATE = moment(new Date('9/1/2020'));
 
 function doLog(...msg) {
@@ -124,6 +124,7 @@ function processData(data) {
 
             if(count >= ROLLING_PERIOD) {
                 // can now start computing a rolling average
+                d[`${key}_rolling_sum`] = rollingSums[i];
                 d[`${key}_rolling_avg`] = rollingSums[i] / ROLLING_PERIOD;
 
                 // decrement outside of the rolling window
